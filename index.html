@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Animation Gallery</title>
+    <p>ANIMATION GALLERY</p>
+    <style>
+        p{
+            font-family : "Foldit"
+        }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .gallery-item {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        animation: pulse 2s infinite;
+      }
+      .gallery-item:hover {
+        animation-play-state: paused;
+      }
+      .gallery-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: slide 2s infinite;
+      }
+      .gallery-item:hover img {
+        animation-play-state: paused;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-20%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/564x/de/f3/cc/def3cc3dad997a06e9eba37f9ed075b9.jpg" alt="Image 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/564x/69/11/c8/6911c890b6ced85c612035936b753ab4.jpg" alt="Image 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/564x/65/9d/01/659d0177a35f6a3314fce1575f7bdd7d.jpg" alt="Image 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/564x/9e/1a/d1/9e1ad19f2315bb7f1457782051dc57cd.jpg" alt="Image 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/564x/2f/04/96/2f0496c9c86320771d94c46be3f71c45.jpg" alt="Image 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.pinimg.com/564x/06/53/61/06536137d270fe29823eae91b871aa7b.jpg" alt="Image 6" />
+      </div>
+    </div>
+  </body>
+</html>
+''
